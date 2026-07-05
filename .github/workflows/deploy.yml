@@ -20,8 +20,8 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
-      - run: npm run build
       - uses: actions/configure-pages@v4
+      - run: VITE_BASE=/my-portfolio/ npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
