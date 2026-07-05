@@ -230,7 +230,7 @@ body { font-family: 'Inter', sans-serif; background: #0D0D0D; color: white; over
 .skill-laptop:hover { transform: rotateX(0deg) rotateY(0deg) scale(1.03); }
 @keyframes skillLaptopFloat { 0%, 100% { transform: rotateX(8deg) rotateY(-8deg) translateY(0); } 50% { transform: rotateX(8deg) rotateY(-8deg) translateY(-12px); } }
 
-.skill-laptop-screen { width: 520px; height: 350px; background: #1a1a2e; border-radius: 16px 16px 0 0; border: 4px solid #444; position: relative; overflow: hidden; transform: translateZ(25px); box-shadow: 0 0 60px rgba(255,107,53,0.2); }
+.skill-laptop-screen { width: 520px; height: 350px; background: #1a1a2e; border-radius: 16px 16px 0 0; border: 4px solid #444; position: relative; overflow: hidden; transform: translateZ(25px); box-shadow: 0 0 60px rgba(255,107,53,0.25), 0 0 120px rgba(255,107,53,0.1); }
 .skill-laptop-screen-inner { position: absolute; inset: 4px; background: #0a0a15; border-radius: 12px; overflow: hidden; }
 
 .skill-laptop-keyboard { width: 570px; height: 80px; background: linear-gradient(180deg, #2a2a2a, #1a1a1a); border-radius: 0 0 8px 8px; margin: 0 auto; transform: translateZ(15px); position: relative; padding: 10px 18px; }
@@ -250,12 +250,35 @@ body { font-family: 'Inter', sans-serif; background: #0D0D0D; color: white; over
 .skills-scroll-inner.scrolling { animation-play-state: running; }
 @keyframes scrollSkills { 0% { transform: translateY(0); } 100% { transform: translateY(-50%); } }
 
-.skill-item { display: flex; align-items: center; gap: 14px; padding: 12px 18px; margin: 8px 12px; background: rgba(255,107,53,0.08); border: 1px solid rgba(255,107,53,0.15); border-radius: 10px; font-size: 14px; transition: all 0.3s; }
-.skill-item:hover { background: rgba(255,107,53,0.15); border-color: rgba(255,107,53,0.3); transform: translateX(5px); }
-
-/* Skill Pills */
-.skill-pill { display: inline-flex; align-items: center; padding: 6px 14px; background: #141414; border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; font-size: 13px; transition: all 0.3s; }
-.skill-pill:hover { border-color: #FF6B35; background: rgba(255,107,53,0.1); transform: translateY(-2px); }
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 18px;
+  margin: 8px 12px;
+  background: rgba(255,107,53,0.08);
+  border: 1px solid rgba(255,107,53,0.15);
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s;
+  text-shadow: 0 0 10px rgba(255,107,53,0.6), 0 0 20px rgba(255,107,53,0.3);
+  color: #FF8C5A;
+}
+.skill-item i {
+  text-shadow: 0 0 12px currentColor, 0 0 24px currentColor, 0 0 40px currentColor;
+}
+.skill-item span {
+  text-shadow: 0 0 10px rgba(255,107,53,0.6), 0 0 20px rgba(255,107,53,0.3), 0 0 40px rgba(255,107,53,0.15);
+}
+.skill-item:hover {
+  background: rgba(255,107,53,0.15);
+  border-color: rgba(255,107,53,0.4);
+  transform: translateX(5px);
+  color: #FFB088;
+  text-shadow: 0 0 15px rgba(255,107,53,0.8), 0 0 30px rgba(255,107,53,0.4), 0 0 60px rgba(255,107,53,0.2);
+  box-shadow: 0 0 20px rgba(255,107,53,0.1);
+}
 
 /* ==================== */
 /* HOLOGRAPHIC CONTACT HUB */
@@ -910,10 +933,6 @@ button:disabled { opacity: 0.7; cursor: not-allowed; }
     .about-card { padding: 2rem; }
     .about-card .text-3xl { font-size: 2.75rem; }
     .about-card .text-sm { font-size: 1rem; }
-
-    .skill-pill { padding: 10px 22px; font-size: 16px; }
-    .skill-category h3 { font-size: 1.3rem; }
-    .skill-category h3 i { font-size: 1.1rem; }
 
     .carousel-wrapper { height: 520px; }
     .carousel { width: 300px; height: 430px; }
