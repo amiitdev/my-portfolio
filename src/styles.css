@@ -230,12 +230,12 @@ body { font-family: 'Inter', sans-serif; background: #0D0D0D; color: white; over
 .skill-laptop:hover { transform: rotateX(0deg) rotateY(0deg) scale(1.03); }
 @keyframes skillLaptopFloat { 0%, 100% { transform: rotateX(8deg) rotateY(-8deg) translateY(0); } 50% { transform: rotateX(8deg) rotateY(-8deg) translateY(-12px); } }
 
-.skill-laptop-screen { width: 400px; height: 280px; background: #1a1a2e; border-radius: 14px 14px 0 0; border: 4px solid #444; position: relative; overflow: hidden; transform: translateZ(25px); box-shadow: 0 0 40px rgba(255,107,53,0.15); }
-.skill-laptop-screen-inner { position: absolute; inset: 4px; background: #0a0a15; border-radius: 10px; overflow: hidden; }
+.skill-laptop-screen { width: 520px; height: 350px; background: #1a1a2e; border-radius: 16px 16px 0 0; border: 4px solid #444; position: relative; overflow: hidden; transform: translateZ(25px); box-shadow: 0 0 60px rgba(255,107,53,0.2); }
+.skill-laptop-screen-inner { position: absolute; inset: 4px; background: #0a0a15; border-radius: 12px; overflow: hidden; }
 
-.skill-laptop-keyboard { width: 440px; height: 65px; background: linear-gradient(180deg, #2a2a2a, #1a1a1a); border-radius: 0 0 6px 6px; margin: 0 auto; transform: translateZ(15px); position: relative; padding: 8px 15px; }
+.skill-laptop-keyboard { width: 570px; height: 80px; background: linear-gradient(180deg, #2a2a2a, #1a1a1a); border-radius: 0 0 8px 8px; margin: 0 auto; transform: translateZ(15px); position: relative; padding: 10px 18px; }
 
-.skill-laptop-base { width: 480px; height: 14px; background: linear-gradient(180deg, #222, #111); border-radius: 0 0 12px 12px; margin: 0 auto; transform: translateZ(8px); position: relative; }
+.skill-laptop-base { width: 620px; height: 16px; background: linear-gradient(180deg, #222, #111); border-radius: 0 0 14px 14px; margin: 0 auto; transform: translateZ(8px); position: relative; }
 .skill-laptop-base::before { content: ''; position: absolute; top: 3px; left: 50%; transform: translateX(-50%); width: 70px; height: 5px; background: #333; border-radius: 3px; }
 
 .skill-screen-glow { position: absolute; top: -50px; left: -50px; right: -50px; bottom: 50px; background: radial-gradient(ellipse at center, rgba(255,107,53,0.25), transparent 70%); pointer-events: none; z-index: -1; }
@@ -787,13 +787,17 @@ html, body { max-width: 100vw; overflow-x: hidden; }
 /* Responsive */
 @media (max-width: 768px) {
     .skill-laptop-3d {
-        transform: scale(0.7);
+        transform: scale(0.85);
     }
 
     .skill-laptop {
         transform: rotateX(5deg) rotateY(0deg);
         animation: none;
     }
+
+    .skill-laptop-screen { width: 420px; height: 290px; transform: translateZ(0); }
+    .skill-laptop-keyboard { width: 460px; height: 65px; transform: translateZ(0); }
+    .skill-laptop-base { width: 500px; height: 14px; transform: translateZ(0); }
     
     .train-engine { width: 50px; height: 25px; }
     .train-car { width: 40px; height: 22px; }
@@ -801,36 +805,36 @@ html, body { max-width: 100vw; overflow-x: hidden; }
 
 @media (max-width: 640px) {
     .skill-laptop-3d {
-        transform: scale(0.55);
+        transform: scale(0.7);
     }
 
-    .skill-laptop-screen { width: 320px; height: 230px; transform: translateZ(0); }
-    .skill-laptop-keyboard { width: 320px; height: 55px; transform: translateZ(0); }
-    .skill-laptop-base { width: 340px; height: 14px; transform: translateZ(0); }
+    .skill-laptop-screen { width: 360px; height: 250px; transform: translateZ(0); }
+    .skill-laptop-keyboard { width: 390px; height: 55px; transform: translateZ(0); }
+    .skill-laptop-base { width: 420px; height: 14px; transform: translateZ(0); }
 }
 
 @media (max-width: 480px) {
     .skill-laptop-3d {
-        transform: scale(0.55);
+        transform: scale(0.6);
     }
 
     .skill-laptop {
         transform: rotateX(3deg) rotateY(0deg);
     }
 
-    .skill-laptop-screen { width: 280px; height: 200px; }
-    .skill-laptop-keyboard { width: 280px; height: 48px; }
-    .skill-laptop-base { width: 300px; height: 12px; }
+    .skill-laptop-screen { width: 320px; height: 220px; }
+    .skill-laptop-keyboard { width: 340px; height: 48px; }
+    .skill-laptop-base { width: 370px; height: 12px; }
 }
 
 @media (max-width: 360px) {
     .skill-laptop-3d {
-        transform: scale(0.5);
+        transform: scale(0.55);
     }
 
-    .skill-laptop-screen { width: 220px; height: 150px; }
-    .skill-laptop-keyboard { width: 220px; height: 36px; }
-    .skill-laptop-base { width: 235px; height: 9px; }
+    .skill-laptop-screen { width: 280px; height: 190px; }
+    .skill-laptop-keyboard { width: 300px; height: 42px; }
+    .skill-laptop-base { width: 320px; height: 10px; }
 }
 
 /* Button disabled */
@@ -884,10 +888,10 @@ button:disabled { opacity: 0.7; cursor: not-allowed; }
     .track-stop { width: 20px; height: 20px; border-width: 4px; }
     .track-stop span { font-size: 12px; top: -32px; }
 
-    .skill-laptop-3d { transform: scale(1.1); }
-    .skill-laptop-screen { width: 460px; height: 320px; }
-    .skill-laptop-keyboard { width: 500px; height: 72px; }
-    .skill-laptop-base { width: 540px; }
+    .skill-laptop-3d { transform: scale(1.2); }
+    .skill-laptop-screen { width: 560px; height: 380px; }
+    .skill-laptop-keyboard { width: 610px; height: 85px; }
+    .skill-laptop-base { width: 660px; }
 
     .phone-3d { width: 300px; height: 580px; border-radius: 46px; }
     .phone-screen { border-radius: 40px; }
@@ -916,9 +920,9 @@ button:disabled { opacity: 0.7; cursor: not-allowed; }
     .carousel-card-header i { font-size: 72px; }
     .carousel-card-body h3 { font-size: 22px; }
 
-    .skill-laptop-screen { width: 500px; height: 350px; }
-    .skill-laptop-keyboard { width: 540px; height: 78px; }
-    .skill-laptop-base { width: 580px; }
+    .skill-laptop-screen { width: 600px; height: 400px; }
+    .skill-laptop-keyboard { width: 650px; height: 90px; }
+    .skill-laptop-base { width: 700px; }
 
     .phone-3d { width: 320px; height: 620px; }
 }
