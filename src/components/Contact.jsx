@@ -14,6 +14,7 @@ export default function Contact() {
   const [open, setOpen] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [sent, setSent] = useState(false);
+  const [toastExit, setToastExit] = useState(false);
   const formRef = useRef(null);
 
   const openForm = () => setOpen(true);
@@ -25,8 +26,12 @@ export default function Contact() {
     setTimeout(() => {
       setSubmitting(false);
       setSent(true);
-      setTimeout(() => setSent(false), 3000);
+      setToastExit(false);
       e.target.reset();
+      setTimeout(() => {
+        setToastExit(true);
+        setTimeout(() => setSent(false), 400);
+      }, 3000);
     }, 1500);
   };
 
@@ -149,9 +154,9 @@ export default function Contact() {
       </div>
 
       {sent && (
-        <div className="hub-toast">
+        <div className={`hub-toast${toastExit ? ' exit' : ''}`}>
           <i className="fa-solid fa-check-circle"></i>
-          <span>Message sent! Thank you.</span>
+          <span>Message sent! I'll get back to you soon.</span>
         </div>
       )}
     </>
