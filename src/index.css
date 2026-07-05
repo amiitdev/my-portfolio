@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@import "./styles.css";
+
+@theme {
+  --color-primary: #FF6B35;
+  --color-primary-light: #FF8C5A;
+  --color-primary-dark: #E55A25;
+  --color-dark: #0D0D0D;
+  --color-dark-light: #1A1A1A;
+  --color-dark-card: #141414;
+  --color-accent: #FFB088;
+  --font-inter: 'Inter', sans-serif;
+}
+
+:root {
+  --primary: #FF6B35;
+  --dark-card: #141414;
+}
