@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Navbar from './components/Navbar'
+import ThemeSwitcher from './components/ThemeSwitcher'
 import Loader from './components/Loader'
 import StarsCanvas from './components/StarsCanvas'
 import Hero from './components/Hero'
@@ -83,6 +84,7 @@ export default function App() {
   return (
     <>
       {loading && <Loader />}
+      <ThemeSwitcher />
       <StarsCanvas />
       <Navbar />
       <main>
