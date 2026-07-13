@@ -1,6 +1,14 @@
 @import "tailwindcss";
 @import "./styles.css";
 
+:root {
+  --primary-rgb: 255, 107, 53;
+  --primary-dark: var(--color-primary-dark);
+  --primary-light: var(--color-primary-light);
+  --primary: var(--color-primary);
+  --dark-card: #141414;
+}
+
 @theme {
   --color-primary: #FF6B35;
   --color-primary-light: #FF8C5A;
@@ -50,12 +58,4 @@
   --color-primary-dark: #CA8A04;
   --color-accent: #FDE047;
   --primary-rgb: 234, 179, 8;
-}
-
-:root {
-  --primary-rgb: 255, 107, 53;
-  --primary-dark: var(--color-primary-dark);
-  --primary-light: var(--color-primary-light);
-  --primary: var(--color-primary);
-  --dark-card: #141414;
 }

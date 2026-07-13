@@ -360,6 +360,8 @@ body { font-family: 'Inter', sans-serif; background: #0D0D0D; color: white; over
   display: flex;
   align-items: center;
   gap: 10px;
+  width: max-content;
+  max-width: min(480px, calc(100vw - 32px));
   box-shadow: 0 0 40px rgba(var(--primary-rgb),0.2), 0 10px 40px rgba(0,0,0,0.3);
   backdrop-filter: blur(12px);
   animation: toastIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -397,6 +399,7 @@ body { font-family: 'Inter', sans-serif; background: #0D0D0D; color: white; over
     .hub-orbit:nth-child(2) { inset: -100px; }
     .hub-node { width: 38px; height: 38px; margin-left: -19px; font-size: 15px; }
     .hub-form-panel { width: 100vw; right: -100vw; }
+    .hub-toast { top: auto; bottom: 24px; padding: 12px 20px; }
 }
 @media (max-width: 480px) {
     .hub-ring { width: 200px; height: 200px; }
@@ -405,6 +408,8 @@ body { font-family: 'Inter', sans-serif; background: #0D0D0D; color: white; over
     .hub-node { width: 34px; height: 34px; margin-left: -17px; font-size: 13px; }
     .hub-avatar { width: 52px; height: 52px; font-size: 22px; }
     .hub-name { font-size: 17px; }
+    .hub-toast { padding: 10px 16px; font-size: 13px; border-radius: 12px; gap: 8px; }
+    .hub-toast i { font-size: 16px; }
 }
 
 /* Removed phone styles - using holographic hub instead */
@@ -842,6 +847,8 @@ body { font-family: 'Inter', sans-serif; background: #0D0D0D; color: white; over
 /* GENERAL STYLES */
 /* ==================== */
 .nav-link.active { color: var(--primary) !important; }
+.nav-mobile-menu { box-shadow: 0 0 40px rgba(var(--primary-rgb),0.2), 0 0 80px rgba(var(--primary-rgb),0.08), inset 0 0 30px rgba(var(--primary-rgb),0.05); }
+.nav-link-active-shadow { box-shadow: 0 0 20px rgba(var(--primary-rgb),0.2); }
 
 .about-card:hover, .project-card:hover { transform: translateY(-5px); box-shadow: 0 10px 40px rgba(var(--primary-rgb),0.1); }
 .skill-tag:hover { transform: translateY(-2px); }

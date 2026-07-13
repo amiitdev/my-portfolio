@@ -65,7 +65,7 @@ export default function Navbar() {
         className={`md:hidden transition-all duration-400 ease-out overflow-hidden ${menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
         style={{ pointerEvents: menuOpen ? 'auto' : 'none' }}
       >
-        <ul className="flex flex-col py-3 px-4 mx-3 mb-3 rounded-2xl bg-[#0f0f0f] border border-primary/30 shadow-[0_0_40px_rgba(255,107,53,0.2),0_0_80px_rgba(255,107,53,0.08),inset_0_0_30px_rgba(255,107,53,0.05)]">
+        <ul className="nav-mobile-menu flex flex-col py-3 px-4 mx-3 mb-3 rounded-2xl bg-[#0f0f0f] border border-primary/30">
           {links.map(([href, icon, label], i) => (
             <li key={href}
               style={{ transitionDelay: menuOpen ? `${i * 50}ms` : '0ms' }}
@@ -74,7 +74,7 @@ export default function Navbar() {
               <a href={href} onClick={e => { e.preventDefault(); scrollTo(href) }}
                 className={`flex items-center gap-3 px-4 py-3 my-0.5 rounded-xl text-sm font-medium transition-all ${
                   active === href.slice(1)
-                    ? 'text-white bg-primary/20 shadow-[0_0_20px_rgba(255,107,53,0.2)] border border-primary/30'
+                    ? 'text-white bg-primary/20 nav-link-active-shadow border border-primary/30'
                     : 'text-gray-300 hover:text-white hover:bg-primary/10 border border-transparent hover:border-primary/20'
                 }`}
               ><i className={`fa-solid fa-${icon} w-5 text-center ${active === href.slice(1) ? 'text-primary' : 'text-primary/70'}`} />{label}</a>
